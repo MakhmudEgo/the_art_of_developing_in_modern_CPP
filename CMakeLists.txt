@@ -16,5 +16,6 @@ add_executable(CPP_YANDEX
 #        white_belt/2_week/train_exercise/move_strings.cpp
 #        white_belt/2_week/train_exercise/sequence_reversal.cpp
 #        white_belt/2_week/train_exercise/sequence_reversal_2.cpp
-        white_belt/2_week/train_exercise/average_temperature.cpp
+#        white_belt/2_week/train_exercise/average_temperature.cpp
+        white_belt/2_week/queueing.cpp
         )

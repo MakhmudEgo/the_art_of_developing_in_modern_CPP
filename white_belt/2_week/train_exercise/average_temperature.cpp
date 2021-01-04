@@ -29,5 +29,6 @@ int main()
 	{
 		std::cout << nItem << ' ';
 	}
+	std::cout << std::endl;
 	return (0);
 }
