@@ -4,4 +4,11 @@ project(CPP_YANDEX)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(CPP_YANDEX
-        main.cpp)
+#        main.cpp
+#        white_belt/1_week/train_exercise/even_numbers.cpp
+        white_belt/1_week/train_exercise/second_occurence.cpp
+
+
+
+
+        )
