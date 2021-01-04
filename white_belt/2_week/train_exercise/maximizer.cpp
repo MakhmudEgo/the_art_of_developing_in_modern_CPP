@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-void UpdateIfGreater(const int& nA, int& nB)
+void UpdateIfGreater(int nA, int& nB)
 {
 	if (nA > nB)
 	{
