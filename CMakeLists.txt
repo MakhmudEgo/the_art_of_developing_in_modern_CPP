@@ -13,5 +13,6 @@ add_executable(CPP_YANDEX
 #        white_belt/2_week/train_exercise/palindrome.cpp
 #        white_belt/2_week/train_exercise/selection_palindromes.cpp
 #        white_belt/2_week/train_exercise/maximizer.cpp
-        white_belt/2_week/train_exercise/move_strings.cpp
+#        white_belt/2_week/train_exercise/move_strings.cpp
+        white_belt/2_week/train_exercise/sequence_reversal.cpp
         )
