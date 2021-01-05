@@ -20,5 +20,6 @@ add_executable(CPP_YANDEX
 #        white_belt/2_week/queueing.cpp
 #        white_belt/2_week/monthly_affairs.cpp
 #        white_belt/2_week/map/train_exercise/anagrams.cpp
-        white_belt/2_week/map/train_exercise/directory_capitals.cpp
+#        white_belt/2_week/map/train_exercise/directory_capitals.cpp
+        white_belt/2_week/map/bus_stops_1.cpp
         )
