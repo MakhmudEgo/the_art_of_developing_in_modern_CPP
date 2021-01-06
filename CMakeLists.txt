@@ -29,5 +29,6 @@ add_executable(CPP_YANDEX
 #        white_belt/2_week/set/bus_stops_3.cpp
 #        white_belt/3_week/algorithms/sorting_integers_modulo.cpp
 #        white_belt/3_week/algorithms/case_insensitive_sorting.cpp
-        white_belt/3_week/structures_and_classes/train_exercise/sorted_strings.cpp
+#        white_belt/3_week/structures_and_classes/train_exercise/sorted_strings.cpp
+        white_belt/3_week/structures_and_classes/first_and_last_names_1.cpp
         )
