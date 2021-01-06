@@ -25,5 +25,6 @@ add_executable(CPP_YANDEX
 #        white_belt/2_week/map/bus_stops_2.cpp
 #        white_belt/2_week/set/train_exercise/number_unique_rows.cpp
 #        white_belt/2_week/set/train_exercise/set_map_values.cpp
-        white_belt/2_week/set/synonyms.cpp
+#        white_belt/2_week/set/synonyms.cpp
+        white_belt/2_week/set/bus_stops_3.cpp
         )
