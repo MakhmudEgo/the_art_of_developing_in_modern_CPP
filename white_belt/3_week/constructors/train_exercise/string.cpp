@@ -7,10 +7,7 @@
 
 class ReversibleString {
 public:
-	ReversibleString()
-	{
-		szString = """";
-	}
+	ReversibleString() {}
 
 	ReversibleString(const std::string& szSrc)
 	{
