@@ -31,5 +31,5 @@ add_executable(CPP_YANDEX
 #        white_belt/3_week/algorithms/case_insensitive_sorting.cpp
 #        white_belt/3_week/structures_and_classes/train_exercise/sorted_strings.cpp
 #        white_belt/3_week/structures_and_classes/first_and_last_names_1.cpp
-        white_belt/3_week/structures_and_classes/first_and_last_names_2.cpp
-        )
+#        white_belt/3_week/structures_and_classes/first_and_last_names_2.cpp
+        white_belt/3_week/constructors/train_exercise/string.cpp)
