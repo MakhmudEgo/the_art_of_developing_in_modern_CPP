@@ -34,4 +34,5 @@ add_executable(CPP_YANDEX
 #        white_belt/3_week/structures_and_classes/first_and_last_names_2.cpp
 #        white_belt/3_week/constructors/train_exercise/string.cpp
 #        white_belt/3_week/constructors/first_and_last_names_3.cpp
-        white_belt/3_week/constructors/Initialization_methods.cpp)
+#        white_belt/3_week/constructors/Initialization_methods.cpp
+        white_belt/4_week/structures_and_classes/struct_LectureTitle.cpp)
