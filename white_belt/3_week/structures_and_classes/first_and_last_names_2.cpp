@@ -6,7 +6,7 @@
 #include <map>
 #include <vector>
 
-std::string getHistName(const std::vector<std::string>& vName, const std::string& szCurrentName)
+std::string getHistName(const std::vector<std::string>& vName)
 {
 	std::string szRes, szIsdupl = vName[(int)vName.size() - 1];
 
@@ -126,14 +126,14 @@ public:
 		}
 		else if (szFirstName.empty())
 		{
-			return (szLastName + getHistName(vLastName, szLastName) + " with unknown first name");
+			return (szLastName + getHistName(vLastName) + " with unknown first name");
 		}
 		else if (szLastName.empty())
 		{
-			return (szFirstName + getHistName(vFirstName, szFirstName) + " with unknown last name");
+			return (szFirstName + getHistName(vFirstName) + " with unknown last name");
 		}
-		return (szFirstName + getHistName(vFirstName, szFirstName) + " "
-		+ szLastName + getHistName(vLastName, szLastName));
+		return (szFirstName + getHistName(vFirstName) + " "
+		+ szLastName + getHistName(vLastName));
 	}
 
 private:
