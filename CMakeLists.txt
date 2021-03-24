@@ -36,3 +36,10 @@ add_executable(CPP_YANDEX
 #        white_belt/3_week/constructors/first_and_last_names_3.cpp
 #        white_belt/3_week/constructors/Initialization_methods.cpp
         white_belt/4_week/structures_and_classes/struct_LectureTitle.cpp)
+
+add_executable(reversFunction white_belt/4_week/structures_and_classes/reversFunction.cpp)
+add_executable(reversFunctionWithOthersOperat white_belt/4_week/structures_and_classes/reversFunctionWithOthersOperat.cpp)
+add_executable(filestreamPart1 white_belt/4_week/structures_and_classes/filestreamPart1.cpp)
+add_executable(filestreamPart2 white_belt/4_week/structures_and_classes/filestreamPart2.cpp)
+add_executable(AccurateOutput white_belt/4_week/structures_and_classes/accurateOutput.cpp)
+add_executable(readAndOutTable white_belt/4_week/structures_and_classes/readAndOutTable.cpp)
