@@ -43,3 +43,4 @@ add_executable(filestreamPart1 white_belt/4_week/structures_and_classes/filestre
 add_executable(filestreamPart2 white_belt/4_week/structures_and_classes/filestreamPart2.cpp)
 add_executable(AccurateOutput white_belt/4_week/structures_and_classes/accurateOutput.cpp)
 add_executable(readAndOutTable white_belt/4_week/structures_and_classes/readAndOutTable.cpp)
+add_executable(listStudents white_belt/4_week/structures_and_classes/listStudents.cpp)
