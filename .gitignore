@@ -3,3 +3,4 @@ cmake-build-debug
 a.out.dSYM
 .idea
 *.DS_Store
+*.log

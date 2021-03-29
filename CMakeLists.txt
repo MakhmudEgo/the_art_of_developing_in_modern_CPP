@@ -44,3 +44,8 @@ add_executable(filestreamPart2 white_belt/4_week/structures_and_classes/filestre
 add_executable(AccurateOutput white_belt/4_week/structures_and_classes/accurateOutput.cpp)
 add_executable(readAndOutTable white_belt/4_week/structures_and_classes/readAndOutTable.cpp)
 add_executable(listStudents white_belt/4_week/structures_and_classes/listStudents.cpp)
+add_executable(rational_interface white_belt/4_week/operator_overloading/01/rational_interface.cpp)
+add_executable(rational_eq_add_sub white_belt/4_week/operator_overloading/02/rational_eq_add_sub.cpp)
+add_executable(rational_mult_div white_belt/4_week/operator_overloading/03/rational_mult_div.cpp)
+add_executable(rational_io white_belt/4_week/operator_overloading/04/rational_io.cpp)
+add_executable(rational_map white_belt/4_week/operator_overloading/05/rational_map.cpp)
