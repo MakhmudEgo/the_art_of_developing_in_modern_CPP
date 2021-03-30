@@ -49,3 +49,7 @@ add_executable(rational_eq_add_sub white_belt/4_week/operator_overloading/02/rat
 add_executable(rational_mult_div white_belt/4_week/operator_overloading/03/rational_mult_div.cpp)
 add_executable(rational_io white_belt/4_week/operator_overloading/04/rational_io.cpp)
 add_executable(rational_map white_belt/4_week/operator_overloading/05/rational_map.cpp)
+add_executable(EnsureEqual white_belt/4_week/throw/EnsureEqual.cpp)
+add_executable(rational_throw white_belt/4_week/throw/rational_throw.cpp)
+add_executable(Calculator_of_ordinary_fractions white_belt/4_week/throw/Calculator_of_ordinary_fractions.cpp)
+add_executable(TimeServer white_belt/4_week/throw/TimeServer.cpp)
