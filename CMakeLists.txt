@@ -3,6 +3,8 @@ project(CPP_YANDEX)
 
 set(CMAKE_CXX_STANDARD 17)
 
+add_executable(main main.cpp)
+
 add_executable(CPP_YANDEX
 #        main.cpp
 #        white_belt/1_week/train_exercise/even_numbers.cpp
@@ -41,7 +43,7 @@ add_executable(reversFunction white_belt/4_week/structures_and_classes/reversFun
 add_executable(reversFunctionWithOthersOperat white_belt/4_week/structures_and_classes/reversFunctionWithOthersOperat.cpp)
 add_executable(filestreamPart1 white_belt/4_week/structures_and_classes/filestreamPart1.cpp)
 add_executable(filestreamPart2 white_belt/4_week/structures_and_classes/filestreamPart2.cpp)
-add_executable(AccurateOutput white_belt/4_week/structures_and_classes/accurateOutput.cpp)
+add_executable(AccurateOutput white_belt/4_week/structures_and_classes/accurateOutput.cpp yellow_belt/test_white_belt/Matrix.cpp)
 add_executable(readAndOutTable white_belt/4_week/structures_and_classes/readAndOutTable.cpp)
 add_executable(listStudents white_belt/4_week/structures_and_classes/listStudents.cpp)
 add_executable(rational_interface white_belt/4_week/operator_overloading/01/rational_interface.cpp)
@@ -54,3 +56,4 @@ add_executable(rational_throw white_belt/4_week/throw/rational_throw.cpp)
 add_executable(Calculator_of_ordinary_fractions white_belt/4_week/throw/Calculator_of_ordinary_fractions.cpp)
 add_executable(TimeServer white_belt/4_week/throw/TimeServer.cpp)
 add_executable(solution white_belt/5_week/solution.cpp)
+add_executable(Matrix yellow_belt/test_white_belt/Matrix.cpp)
