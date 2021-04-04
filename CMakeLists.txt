@@ -3,6 +3,8 @@ project(CPP_YANDEX)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror")
+
 add_executable(main main.cpp)
 
 add_executable(CPP_YANDEX
@@ -57,3 +59,4 @@ add_executable(Calculator_of_ordinary_fractions white_belt/4_week/throw/Calculat
 add_executable(TimeServer white_belt/4_week/throw/TimeServer.cpp)
 add_executable(solution white_belt/5_week/solution.cpp)
 add_executable(Matrix yellow_belt/test_white_belt/Matrix.cpp)
+add_executable(average_temperature_2 yellow_belt/Integer_types/average_temperature_2.cpp)
