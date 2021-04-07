@@ -41,6 +41,8 @@ add_executable(CPP_YANDEX
 #        white_belt/3_week/constructors/Initialization_methods.cpp
         white_belt/4_week/structures_and_classes/struct_LectureTitle.cpp)
 
+add_executable(bus_stops_1 white_belt/2_week/map/bus_stops_1.cpp)
+
 add_executable(reversFunction white_belt/4_week/structures_and_classes/reversFunction.cpp)
 add_executable(reversFunctionWithOthersOperat white_belt/4_week/structures_and_classes/reversFunctionWithOthersOperat.cpp)
 add_executable(filestreamPart1 white_belt/4_week/structures_and_classes/filestreamPart1.cpp)
@@ -64,3 +66,5 @@ add_executable(block_weight yellow_belt/1_week/Integer_types/block_weight.cpp)
 add_executable(base_regions yellow_belt/1_week/tuples_and_pairs/base_regions.cpp)
 add_executable(task_tracker yellow_belt/1_week/tuples_and_pairs/task_tracker.cpp)
 add_executable(sqrt_all yellow_belt/1_week/temlate_func/sqrt_all.cpp)
+add_executable(GetRefStrict yellow_belt/1_week/temlate_func/GetRefStrict.cpp)
+add_executable(decom_bus_stops_1 yellow_belt/1_week/unit_test/decom_bus_stops_1.cpp)
