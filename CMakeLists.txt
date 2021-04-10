@@ -67,4 +67,6 @@ add_executable(base_regions yellow_belt/1_week/tuples_and_pairs/base_regions.cpp
 add_executable(task_tracker yellow_belt/1_week/tuples_and_pairs/task_tracker.cpp)
 add_executable(sqrt_all yellow_belt/1_week/temlate_func/sqrt_all.cpp)
 add_executable(GetRefStrict yellow_belt/1_week/temlate_func/GetRefStrict.cpp)
-add_executable(decom_bus_stops_1 yellow_belt/1_week/unit_test/decom_bus_stops_1.cpp)
+add_executable(decom_bus_stops_1 yellow_belt/2_week/decom_bus_stops_1.cpp)
+add_executable(test_equation yellow_belt/2_week/test_equation.cpp)
+add_executable(test_rational yellow_belt/2_week/test_rational.cpp)
