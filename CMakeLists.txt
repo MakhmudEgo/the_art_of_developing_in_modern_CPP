@@ -75,3 +75,4 @@ add_executable(sum_reverse_sort yellow_belt/3_week/sum_reverse_sort/sum_reverse_
 add_executable(phone_number yellow_belt/3_week/phone_number/phone_number.cpp yellow_belt/3_week/phone_number/main.cpp)
 add_executable(Rectangle yellow_belt/3_week/phone_number/phone_number.cpp yellow_belt/3_week/Rectangle/Rectangle.cpp yellow_belt/3_week/Rectangle/main.cpp)
 add_executable(decom_bus_stops_2 yellow_belt/3_week/decom_bus_stops_2/main.cpp yellow_belt/3_week/decom_bus_stops_2/query.cpp yellow_belt/3_week/decom_bus_stops_2/responses.h yellow_belt/3_week/decom_bus_stops_2/responses.cpp yellow_belt/3_week/decom_bus_stops_2/bus_manager.cpp yellow_belt/3_week/decom_bus_stops_2/bus_manager.h)
+add_executable(PrintVectorPart yellow_belt/4_week/PrintVectorPart.cpp)
