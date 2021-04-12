@@ -77,3 +77,4 @@ add_executable(Rectangle yellow_belt/3_week/phone_number/phone_number.cpp yellow
 add_executable(decom_bus_stops_2 yellow_belt/3_week/decom_bus_stops_2/main.cpp yellow_belt/3_week/decom_bus_stops_2/query.cpp yellow_belt/3_week/decom_bus_stops_2/responses.h yellow_belt/3_week/decom_bus_stops_2/responses.cpp yellow_belt/3_week/decom_bus_stops_2/bus_manager.cpp yellow_belt/3_week/decom_bus_stops_2/bus_manager.h)
 add_executable(PrintVectorPart yellow_belt/4_week/PrintVectorPart.cpp)
 add_executable(part_set yellow_belt/4_week/part_set.cpp)
+add_executable(SplitIntoWords yellow_belt/4_week/SplitIntoWords.cpp)
