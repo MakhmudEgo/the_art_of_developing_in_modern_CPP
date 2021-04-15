@@ -4,3 +4,4 @@ a.out.dSYM
 .idea
 *.DS_Store
 *.log
+test.cpp

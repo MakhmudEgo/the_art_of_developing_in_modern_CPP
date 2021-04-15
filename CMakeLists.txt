@@ -78,3 +78,5 @@ add_executable(decom_bus_stops_2 yellow_belt/3_week/decom_bus_stops_2/main.cpp y
 add_executable(PrintVectorPart yellow_belt/4_week/PrintVectorPart.cpp)
 add_executable(part_set yellow_belt/4_week/part_set.cpp)
 add_executable(SplitIntoWords yellow_belt/4_week/SplitIntoWords.cpp)
+add_executable(test yellow_belt/4_week/test.cpp)
+add_executable(delete_dupl yellow_belt/4_week/delete_dupl.cpp)
