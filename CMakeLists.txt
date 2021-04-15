@@ -3,7 +3,7 @@ project(CPP_YANDEX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -D MY_TEST")
 
 add_executable(main main.cpp)
 
@@ -82,3 +82,4 @@ add_executable(test yellow_belt/4_week/test.cpp)
 add_executable(delete_dupl yellow_belt/4_week/delete_dupl.cpp)
 add_executable(MergeSortP1 yellow_belt/4_week/MergeSortP1.cpp)
 add_executable(MergeSortP2 yellow_belt/4_week/MergeSortP2.cpp)
+add_executable(print_permutations yellow_belt/4_week/print_permutations.cpp)
