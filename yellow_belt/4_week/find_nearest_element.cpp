@@ -13,8 +13,13 @@ std::set<int>::const_iterator FindNearestElement(
 std::set<int>::const_iterator FindNearestElement(
 		const std::set<int>& numbers,
 		int border) {
-	(std::lower_bound(numbers.begin(), numbers.end(), border)).first.;
-	return res.fire;
+	auto it = numbers.lower_bound(border);
+	auto it2 = it != numbers.begin() ? std::prev(it) : it;
+	if (it == numbers.begin() ||
+	(std::abs(*it - border) <  std::abs(*it2 - border))) {
+		return it;
+	}
+	return it2;
 }
 
 // set<int>::const_iterator —
