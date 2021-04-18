@@ -5,37 +5,13 @@
 #include <iostream>
 #include <queue>
 
-/*
-int main() {
-	int n;
-	char sign, prev_sign = '$';
-	std::string res, arg;
-	std::cin >> sign >> n;
-	res.push_back(sign);
-	// * | - | +
-	for (int i = 0; i < n; ++i) {
-		std::cin >> sign >> arg;
-		if ((sign == '*' || sign == '/') &&
-		(prev_sign == '+' || prev_sign == '-')) {
-			res.insert(res.begin(), '(');
-			res.push_back(')');
-		}
-		res.push_back(' ');
-		res += sign;
-		res += " " + arg;
-		prev_sign = sign;
-	}
-	std::cout << res << std::endl;
-}
-*/
-
 int main() {
 	int n;
 	std::string arg;
 	char sign, prev_sign = '$';
 	std::deque<std::string> res;
-	std::cin >> sign >> n;
-	res.emplace_back(std::string(1, sign));
+	std::cin >> arg >> n;
+	res.emplace_back(arg);
 	// * | - | +
 	for (int i = 0; i < n; ++i) {
 		std::cin >> sign >> arg;
