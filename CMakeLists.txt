@@ -88,3 +88,4 @@ add_executable(find_starts_with_char yellow_belt/4_week/find_starts_with_char.cp
 add_executable(find_starts_with_string yellow_belt/4_week/find_starts_with_string.cpp)
 add_executable(build_expression yellow_belt/4_week/build_expression.cpp)
 add_executable(build_expression_without_redundant_brackets yellow_belt/4_week/build_expression_without_redundant_brackets.cpp)
+add_executable(inheritance yellow_belt/4_week/inheritance.cpp)
