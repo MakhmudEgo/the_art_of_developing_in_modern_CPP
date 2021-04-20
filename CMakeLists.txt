@@ -91,3 +91,4 @@ add_executable(build_expression_without_redundant_brackets yellow_belt/4_week/bu
 add_executable(inheritance yellow_belt/4_week/inheritance.cpp)
 add_executable(Parser_ yellow_belt/4_week/Parser_.cpp)
 add_executable(notifiers yellow_belt/4_week/notifiers.cpp)
+add_executable(figures yellow_belt/4_week/figures.cpp)
