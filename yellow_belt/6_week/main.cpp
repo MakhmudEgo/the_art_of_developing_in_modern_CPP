@@ -10,13 +10,19 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <sstream>
 
 
 std::string ParseEvent(std::istream& is) {
 	// TODO:: ?
+	return std::string();
 }
 
 void TestAll();
+
+Date ParseDate(istringstream &is) {
+	return Date();
+}
 
 int main() {
 	TestAll();
