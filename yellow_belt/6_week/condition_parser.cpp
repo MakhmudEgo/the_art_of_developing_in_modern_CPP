@@ -6,20 +6,6 @@
 #include "token.h"
 #include <map>
 
-enum class LogicalOperation {
-	And,
-	Or
-};
-
-enum class Comparison {
-	Less,
-	LessOrEqual,
-	Greater,
-	GreaterOrEqual,
-	Equal,
-	NotEqual
-};
-
 Date ParseDate(istringstream &is);
 
 template <class It> std::shared_ptr<Node> ParseComparison(It& current, It end) {
