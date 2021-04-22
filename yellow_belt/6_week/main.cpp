@@ -21,7 +21,7 @@ std::string ParseEvent(std::istream& is) {
 void TestAll();
 
 Date ParseDate(istringstream &is) {
-	return Date();
+	return Date(1,1,1);
 }
 
 int main() {
@@ -39,7 +39,7 @@ int main() {
 			const auto event = ParseEvent(is);
 			db.Add(date, event);
 		} else if (command == "Print") {
-			db.Print(cout);
+			db.Print(std::cout);
 		} else if (command == "Del") {
 			auto condition = ParseCondition(is);
 			auto predicate = [condition](const Date& date, const string& event) {

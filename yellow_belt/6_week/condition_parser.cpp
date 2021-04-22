@@ -4,8 +4,23 @@
 
 #include "condition_parser.h"
 #include "token.h"
-
 #include <map>
+
+enum class LogicalOperation {
+	And,
+	Or
+};
+
+enum class Comparison {
+	Less,
+	LessOrEqual,
+	Greater,
+	GreaterOrEqual,
+	Equal,
+	NotEqual
+};
+
+Date ParseDate(istringstream &is);
 
 template <class It> std::shared_ptr<Node> ParseComparison(It& current, It end) {
 	if (current == end) {
@@ -88,8 +103,7 @@ std::shared_ptr<Node> ParseExpression(It& current, It end, unsigned precedence) 
 			throw logic_error("Expected logic operation");
 		}
 
-		const auto logical_operation = current->value == "AND" ? LogicalOperation::And
-															   : LogicalOperation::Or;
+		const auto logical_operation = current->value == "AND" ? LogicalOperation::And : LogicalOperation::Or;
 		const auto current_precedence = precedences.at(logical_operation);
 		if (current_precedence <= precedence) {
 			break;
