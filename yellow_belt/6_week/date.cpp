@@ -37,7 +37,7 @@ std::ostream &operator<<(std::ostream &os, const Date &date) {
 }
 
 std::tuple<int,int,int> getTupleDate(const Date& date) {
-	return std::make_tuple(date.GetYear(), date.GetMonth(), date.GetDay())
+	return std::make_tuple(date.GetYear(), date.GetMonth(), date.GetDay());
 }
 
 bool operator<(const Date& lhs, const Date& rhs) {
