@@ -15,7 +15,9 @@
 
 std::string ParseEvent(std::istream& is) {
 	std::string res;
-	is >> res;
+
+	is >> std::ws;
+	std::getline(is, res);
 	return res;
 }
 
