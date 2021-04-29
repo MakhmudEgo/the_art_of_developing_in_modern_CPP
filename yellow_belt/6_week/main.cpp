@@ -2,80 +2,24 @@
 // Created by Mahmud Jego on 4/21/21.
 //
 
+#include "test_runner.h"
 #include "database.h"
 #include "date.h"
 #include "condition_parser.h"
 #include "node.h"
-#include "test_runner.h"
 
 #include <iostream>
 #include <stdexcept>
 #include <sstream>
 
-// TODO:: create new enam class for ...
-#define CMD 0
-#define DATE 1
-#define MONTH 2
-#define DAY 3
-
-class InvalidData : public std::exception {
-public:
-	explicit InvalidData(const std::string& arg, int e) {
-		switch (e) {
-			case CMD:
-				this->_arg = "Unknown command: "; break;
-			case DATE:
-				this->_arg = "Wrong date format: "; break;
-			case MONTH:
-				this->_arg = "Month value is invalid: "; break;
-			case DAY:
-				this->_arg = "Day value is invalid: "; break;
-			default:
-				this->_arg = "wtf";
-		}
-		this->_arg += arg;
-
-	}
-	const char *what() const throw() {
-		return this->_arg.c_str();
-	}
-private:
-	std::string _arg;
-};
-
 
 std::string ParseEvent(std::istream& is) {
-	// TODO:: ?
-	static int i;
-	return std::string(std::to_string(++i) + " event");
+	std::string res;
+	is >> res;
+	return res;
 }
 
 void TestAll();
-
-Date ParseDate(istringstream &is) {
-	int year, month, day;
-	std::stringstream date;
-	std::string tmp;
-	is >> tmp;
-	date << tmp;
-	char c;
-	date >> year >> c;
-	if (c != '-' || date.eof())
-		throw InvalidData(date.str(), DATE);
-	date >> month >> c;
-	if (c != '-' || date.eof())
-		throw InvalidData(date.str(), DATE);
-	date >> day;
-	if (date.fail())
-		throw InvalidData(date.str(), DATE);
-	if (month > 12 || month < 1)
-		throw InvalidData(std::to_string(month), MONTH);
-	if (day > 31 || day < 1)
-		throw InvalidData(std::to_string(day), DAY);
-	if (!date.eof() && date.peek() != ' ')
-		throw InvalidData(date.str(), DATE);
-	return {year, month, day};
-}
 
 int main() {
 	TestAll();

@@ -15,4 +15,7 @@ add_executable(6_week
         node.cpp
         node.h
         token.cpp
-        token.h date.cpp date.h test_runner.h)
+        token.h
+        date.cpp
+        date.h
+        test_runner.h test_runner.cpp)

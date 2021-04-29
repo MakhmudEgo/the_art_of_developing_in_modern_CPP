@@ -17,59 +17,21 @@ public:
 
 class Database {
 public:
-	void Add(const Date& date, const std::string& event) {
-		this->_data[date].insert(event);
-	}
+	void Add(const Date& date, const std::string& event);
 
-	void DeleteEvent(const Date& date, const std::string& event = "") {
-		if (event.empty()) {
-			std::cout << "Deleted " << this->_data[date].size() << " events" << std::endl;
-			this->_data[date].clear();
-		} else {
-			if (this->_data[date].count(event)) {
-				auto it = this->_data[date].begin();
-				for (; it != this->_data[date].end(); ++it) {
-					if (*it == event) {
-						this->_data[date].erase(it);
-						break;
-					}
-				}
-				std::cout << "Deleted successfully" << std::endl;
-			} else
-				std::cout << "Event not found" << std::endl;
-		}
-	}
+	void DeleteEvent(const Date& date, const std::string& event = "");
 
-	std::string Last(const Date& date) {
-		return std::string();
-	}
+	std::string Last(const Date& date);
 
-	void Find(const Date& date) const {
-		if (this->_data.count(date)) {
-			for (const auto& item : this->_data.at(date)) {
-				std::cout << item << std::endl;
-			}
-		}
-	}
+	void Find(const Date& date) const;
 
-	void Print() const {
-		for (const auto &item : this->_data) {
-			for (const auto &item1 : item.second) {
-				std::cout << item.first << ' ' << item1 << std::endl;
-			}
-		}
-	}
-	void Print(std::ostream& os) const {
-		for (const auto &item : this->_data) {
-			for (const auto &item1 : item.second) {
-				os << item.first << ' ' << item1 << std::endl;
-			}
-		}
-	}
+	void Print() const;
 
-	int RemoveIf(const std::function<bool(const Date&, const std::string&)>&fn) { return 1; }
-	std::vector<std::string> FindIf(const std::function<bool(const Date&, const std::string&)>&fn) { return std::vector<std::string>(1); }
-//	 RemoveIf(const std::function<bool(const Date&, const std::string&)>&fn) { return 1; }
+	void Print(std::ostream& os) const;
+
+	int RemoveIf(const std::function<bool(const Date&, const std::string&)>&fn);
+
+	std::vector<std::string> FindIf(const std::function<bool(const Date&, const std::string&)>&fn);
 
 
 private:

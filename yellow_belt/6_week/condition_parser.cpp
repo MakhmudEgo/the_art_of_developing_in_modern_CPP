@@ -6,7 +6,9 @@
 #include "token.h"
 #include <map>
 
-Date ParseDate(istringstream &is);
+#include "date.h"
+
+//Date ParseDate(istringstream &is);
 
 template <class It> std::shared_ptr<Node> ParseComparison(It& current, It end) {
 	if (current == end) {

@@ -57,18 +57,16 @@ std::ostream& operator << (std::ostream& os, const std::map<K, V>& m) {
 template<class T, class U>
 void AssertEqual(const T& t, const U& u, const std::string& hint = {}) {
 	if (t != u) {
-		ostringstream os;
+		std::ostringstream os;
 		os << "Assertion failed: " << t << " != " << u;
 		if (!hint.empty()) {
 			os << " hint: " << hint;
 		}
-		throw runtime_error(os.str());
+		throw std::runtime_error(os.str());
 	}
 }
 
-void Assert(bool b, const std::string& hint) {
-	AssertEqual(b, true, hint);
-}
+void Assert(bool b, const std::string& hint);
 
 class TestRunner {
 public:
@@ -77,7 +75,7 @@ public:
 		try {
 			func();
 			std::cerr << test_name << " OK" << std::endl;
-		} catch (exception& e) {
+		} catch (std::exception& e) {
 			++fail_count;
 			std::cerr << test_name << " fail: " << e.what() << std::endl;
 		} catch (...) {
