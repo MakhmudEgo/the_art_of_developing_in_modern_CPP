@@ -54,9 +54,23 @@ void Database::Print(std::ostream &os) const {
 		}
 	}
 }
-
 int Database::RemoveIf(const std::function<bool(const Date &, const std::string &)> &fn) {
-	return 1;
+	std::vector<std::pair<Date, std::string> > res;
+
+	for (auto &[date, event] : _data) {
+		for (auto &item : event) {
+			if (fn(date, item)) {
+				res.emplace_back(date, item);
+			}
+		}
+	}
+	for (const auto &[date, event] : res) {
+		_data.at(date).erase(event);
+		if (_data.at(date).empty()) {
+			_data.erase(date);
+		}
+	}
+	return static_cast<int>(res.size());
 }
 
 std::vector<std::string> Database::FindIf(const std::function<bool(const Date &, const std::string &)> &fn) {
