@@ -36,10 +36,22 @@ std::ostream &operator<<(std::ostream &os, const Date &date) {
 	return os;
 }
 
+std::tuple<int,int,int> getTupleDate(const Date& date) {
+	return std::make_tuple(date.GetYear(), date.GetMonth(), date.GetDay())
+}
+
 bool operator<(const Date& lhs, const Date& rhs) {
-	if (lhs.GetYear() == rhs.GetYear()) {
-		if (lhs.GetMonth() == rhs.GetMonth())
-			return lhs.GetDay() < rhs.GetDay();
-	}
-	return lhs.GetYear() < rhs.GetYear();
+	return getTupleDate(lhs) < getTupleDate(rhs);
+}
+
+bool operator>(const Date& lhs, const Date& rhs) {
+	return getTupleDate(lhs) > getTupleDate(rhs);
+}
+
+bool operator==(const Date& lhs, const Date& rhs) {
+	return getTupleDate(lhs) == getTupleDate(rhs);
+}
+
+bool operator!=(const Date& lhs, const Date& rhs) {
+	return getTupleDate(lhs) != getTupleDate(rhs);
 }
