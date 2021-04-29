@@ -18,4 +18,4 @@ add_executable(6_week
         token.h
         date.cpp
         date.h
-        test_runner.h test_runner.cpp)
+        test_runner.h test_runner.cpp TComparison.h)
