@@ -6,11 +6,8 @@
 #include "database.h"
 #include "date.h"
 #include "condition_parser.h"
-#include "node.h"
-
 #include <iostream>
 #include <stdexcept>
-#include <sstream>
 
 
 std::string ParseEvent(std::istream& is) {

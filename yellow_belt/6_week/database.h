@@ -36,4 +36,5 @@ public:
 
 private:
 	std::map<Date, std::set<std::string> > _data;
+	std::map<Date, std::string> _lastEvent;
 };

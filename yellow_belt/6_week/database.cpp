@@ -6,6 +6,7 @@
 
 void Database::Add(const Date &date, const std::string &event)  {
 	this->_data[date].insert(event);
+	this->_lastEvent[date] = event;
 }
 
 void Database::DeleteEvent(const Date &date, const std::string &event) {
@@ -28,7 +29,24 @@ void Database::DeleteEvent(const Date &date, const std::string &event) {
 }
 
 std::string Database::Last(const Date &date) {
-	return std::string();
+	try {
+		auto it = _lastEvent.lower_bound(date);
+		if ((it->first > date && it == _lastEvent.begin())
+			|| (it == _lastEvent.end() && _lastEvent.empty())) {
+			throw std::invalid_argument(std::string());
+		} else if (it != _lastEvent.end() && it->first == date) {
+			std::stringstream ss;
+			ss << date << ' ' << _lastEvent.at(date);
+			return ss.str();
+		} else {
+			std::stringstream ss;
+			ss << date << ' ' << (--it)->second;
+			return ss.str();
+		}
+	}
+	catch (...) {
+		throw std::invalid_argument(std::string());
+	}
 }
 
 void Database::Find(const Date &date) const {
@@ -69,6 +87,11 @@ int Database::RemoveIf(const std::function<bool(const Date &, const std::string 
 		if (_data.at(date).empty()) {
 			_data.erase(date);
 		}
+		try {
+			if (_lastEvent.at(date) == event) {
+				_lastEvent.erase(date);
+			}
+		} catch (...) {}
 	}
 	return static_cast<int>(res.size());
 }
