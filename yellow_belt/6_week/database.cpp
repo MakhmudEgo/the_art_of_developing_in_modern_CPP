@@ -28,7 +28,7 @@ void Database::DeleteEvent(const Date &date, const std::string &event) {
 	}
 }
 
-std::string Database::Last(const Date &date) {
+std::string Database::Last(const Date &date) const {
 	try {
 		auto it = _lastEvent.lower_bound(date);
 		if ((it->first > date && it == _lastEvent.begin())
@@ -97,7 +97,7 @@ int Database::RemoveIf(const std::function<bool(const Date &, const std::string 
 }
 
 std::vector<std::string> Database::FindIf(
-		const std::function<bool(const Date &, const std::string &)> &fn) {
+		const std::function<bool(const Date &, const std::string &)> &fn) const {
 	std::vector<std::string> res;
 	std::ostringstream ss;
 

@@ -21,7 +21,7 @@ public:
 
 	void DeleteEvent(const Date& date, const std::string& event = "");
 
-	std::string Last(const Date& date);
+	std::string Last(const Date& date) const;
 
 	void Find(const Date& date) const;
 
@@ -31,7 +31,7 @@ public:
 
 	int RemoveIf(const std::function<bool(const Date&, const std::string&)>&fn);
 
-	std::vector<std::string> FindIf(const std::function<bool(const Date&, const std::string&)>&fn);
+	std::vector<std::string> FindIf(const std::function<bool(const Date&, const std::string&)>&fn) const;
 
 
 private:

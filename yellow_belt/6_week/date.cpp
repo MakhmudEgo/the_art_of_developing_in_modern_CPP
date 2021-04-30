@@ -4,7 +4,7 @@
 
 #include "date.h"
 
-Date ParseDate(std::istringstream &is) {
+Date ParseDate(std::istream &is) {
 	int year, month, day;
 	std::stringstream date;
 	std::string tmp;
@@ -54,4 +54,39 @@ bool operator==(const Date& lhs, const Date& rhs) {
 
 bool operator!=(const Date& lhs, const Date& rhs) {
 	return getTupleDate(lhs) != getTupleDate(rhs);
+}
+
+int Date::GetYear() const {
+	return this->_year;
+}
+
+int Date::GetMonth() const {
+	return this->_month;
+}
+
+int Date::GetDay() const {
+	return this->_day;
+}
+
+Date::Date(int year, int month, int day)
+: _year(year), _month(month), _day(day) {}
+
+InvalidData::InvalidData(const std::string &arg, int e)  {
+	switch (e) {
+		case CMD:
+			this->_arg = "Unknown command: "; break;
+		case FULLDATE:
+			this->_arg = "Wrong date format: "; break;
+		case MONTH:
+			this->_arg = "Month value is invalid: "; break;
+		case DAY:
+			this->_arg = "Day value is invalid: "; break;
+		default:
+			this->_arg = "wtf";
+	}
+	this->_arg += arg;
+}
+
+const char *InvalidData::what() const throw()  {
+	return this->_arg.c_str();
 }

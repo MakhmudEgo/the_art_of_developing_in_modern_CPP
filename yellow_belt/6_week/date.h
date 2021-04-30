@@ -14,25 +14,9 @@
 
 class InvalidData : public std::exception {
 public:
-	explicit InvalidData(const std::string& arg, int e) {
-		switch (e) {
-			case CMD:
-				this->_arg = "Unknown command: "; break;
-			case FULLDATE:
-				this->_arg = "Wrong date format: "; break;
-			case MONTH:
-				this->_arg = "Month value is invalid: "; break;
-			case DAY:
-				this->_arg = "Day value is invalid: "; break;
-			default:
-				this->_arg = "wtf";
-		}
-		this->_arg += arg;
+	explicit InvalidData(const std::string& arg, int e);
 
-	}
-	const char *what() const throw() {
-		return this->_arg.c_str();
-	}
+	virtual const char *what() const throw();
 private:
 	std::string _arg;
 };
@@ -40,19 +24,13 @@ private:
 
 class Date {
 public:
-	Date(int year, int month, int day) : _year(year), _month(month), _day(day) {}
+	Date(int year, int month, int day);
 
-	int GetYear() const {
-		return this->_year;
-	}
+	int GetYear() const;
 
-	int GetMonth() const {
-		return this->_month;
-	}
+	int GetMonth() const;
 
-	int GetDay() const {
-		return this->_day;
-	}
+	int GetDay() const;
 
 private:
 	int _year;
@@ -67,4 +45,4 @@ bool operator>(const Date& lhs, const Date& rhs);
 bool operator==(const Date& lhs, const Date& rhs);
 bool operator!=(const Date& lhs, const Date& rhs);
 
-Date ParseDate(std::istringstream &is);
+Date ParseDate(std::istream &is);
