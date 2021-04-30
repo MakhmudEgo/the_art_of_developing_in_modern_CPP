@@ -7,9 +7,9 @@
 void Database::Add(const Date &date, const std::string &event)  {
 	size_t n = this->_data[date].size();
 	this->_data[date].insert(event);
-	std::stringstream ss;
+	/*std::stringstream ss;
 	ss << "Add " << date << ' ' << event << std::endl;
-	_LOG += ss.str();
+	_LOG += ss.str();*/
 
 	if (n != this->_data[date].size())
 		this->_lastEvent[date].push_back(event);
@@ -90,9 +90,9 @@ int Database::RemoveIf(const std::function<bool(const Date &, const std::string 
 	for (auto &[date, event] : _data) {
 		for (auto &item : event) {
 			if (fn(date, item)) {
-				std::stringstream ss;
+				/*std::stringstream ss;
 				ss << "Del " << date << ' ' << item << std::endl;
-				_LOG += ss.str();
+				_LOG += ss.str();*/
 				res.emplace_back(date, item);
 			}
 		}
@@ -104,13 +104,20 @@ int Database::RemoveIf(const std::function<bool(const Date &, const std::string 
 			_data.erase(date);
 		}
 		try {
-			for (auto it = _lastEvent.at(date).begin(); it != _lastEvent.at(date).end(); ++it) {
+			/*for (auto it = _lastEvent.at(date).begin(); it != _lastEvent.at(date).end(); ++it) {
 				if (*it == event) {
 					_lastEvent.at(date).erase(it);
 					if (_lastEvent.at(date).empty()) {
 						_lastEvent.erase(date);
 					}
 					break;
+				}
+			}*/
+			auto it = std::find(_lastEvent.at(date).begin(), _lastEvent.at(date).end(), event);
+			if (it != _lastEvent.at(date).end()) {
+				_lastEvent.at(date).erase(it);
+				if (_lastEvent.at(date).empty()) {
+					_lastEvent.erase(date);
 				}
 			}
 		} catch (...) {}
@@ -123,7 +130,7 @@ std::vector<std::string> Database::FindIf(
 	std::vector<std::string> res;
 	std::ostringstream ss;
 
-	for (auto &[date, event] : _data) {
+	for (auto &[date, event] : _lastEvent) {
 		for (auto &item : event) {
 			if (fn(date, item)) {
 				ss << date << ' ' << item;
