@@ -73,7 +73,20 @@ int Database::RemoveIf(const std::function<bool(const Date &, const std::string 
 	return static_cast<int>(res.size());
 }
 
-std::vector<std::string> Database::FindIf(const std::function<bool(const Date &, const std::string &)> &fn) {
-	return std::vector<std::string>();
+std::vector<std::string> Database::FindIf(
+		const std::function<bool(const Date &, const std::string &)> &fn) {
+	std::vector<std::string> res;
+	std::ostringstream ss;
+
+	for (auto &[date, event] : _data) {
+		for (auto &item : event) {
+			if (fn(date, item)) {
+				ss << date << ' ' << item;
+				res.emplace_back(ss.str());
+				ss.str(std::string());
+			}
+		}
+	}
+	return res;
 }
 
