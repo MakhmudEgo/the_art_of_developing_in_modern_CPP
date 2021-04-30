@@ -13,7 +13,7 @@ bool DateComparisonNode::Evaluate(const Date &date, const std::string &string) {
 }
 
 bool EmptyNode::Evaluate(const Date &date, const std::string &string) {
-	return false;
+	return true;
 }
 
 bool EventComparisonNode::Evaluate(const Date &date, const std::string &event) {

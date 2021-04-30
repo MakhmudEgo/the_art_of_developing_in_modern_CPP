@@ -36,5 +36,8 @@ public:
 
 private:
 	std::map<Date, std::set<std::string> > _data;
-	std::map<Date, std::string> _lastEvent;
+	std::map<Date, std::vector<std::string> > _lastEvent;
+	std::string _LOG;
+public:
+	void setLog(const std::string &log);
 };
