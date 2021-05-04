@@ -19,14 +19,32 @@ public:
 		os << message << std::endl;
 	}
 
+	bool isLogLine() const {
+		return log_line;
+	}
+
+	bool isLogFile() const {
+		return log_file;
+	}
+
 private:
 	ostream& os;
 	bool log_line = false;
 	bool log_file = false;
 };
 
-#define LOG(logger, message) logger.Log(__FILE__ + std::string(" ") + std::string(message))
+#define LOG(logger, message) \
+	if (logger.isLogFile() && logger.isLogLine()) { \
+        logger.Log(__FILE__ + std::string(":") + std::to_string(__LINE__) + " " + message); \
+    } else if (!logger.isLogFile() && !logger.isLogLine()) { \
+        logger.Log(message); \
+    } else if (logger.isLogFile() && !logger.isLogLine()) { \
+        logger.Log(__FILE__ + std::string(" ") + message); \
+    } if (!logger.isLogFile() && logger.isLogLine()) { \
+        logger.Log(std::string("Line ") + std::to_string(__LINE__) + " " + message); \
+    }
 
+/*
 void TestLog() {
 #line 1 "logger.cpp"
 
@@ -54,4 +72,4 @@ void TestLog() {
 int main() {
 	TestRunner tr;
 	RUN_TEST(tr, TestLog);
-}
+}*/
