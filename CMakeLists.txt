@@ -96,4 +96,6 @@ add_executable(CPP_YANDEX
 #add_executable(Parser_from_author_course yellow_belt/4_week/Parser_from_author_course.cpp)
 
 add_executable(LOG red_belt/1_week/LOG.cpp)
+include_directories(test_runner)
+add_executable(Comparator_Generator red_belt/1_week/Comparator_Generator/airline_ticket.h red_belt/1_week/Comparator_Generator/sort_by.cpp)
 
