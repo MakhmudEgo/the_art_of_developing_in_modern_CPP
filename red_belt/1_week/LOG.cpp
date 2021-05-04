@@ -16,7 +16,7 @@ public:
 	void SetLogFile(bool value) { log_file= value; }
 
 	void Log(const string& message) {
-		os << message;
+		os << message << std::endl;
 	}
 
 private:
@@ -25,7 +25,7 @@ private:
 	bool log_file = false;
 };
 
-#define LOG(logger, message) logger.Log(std::string(message) + " " + __FILE__)
+#define LOG(logger, message) logger.Log(__FILE__ + std::string(" ") + std::string(message))
 
 void TestLog() {
 #line 1 "logger.cpp"
