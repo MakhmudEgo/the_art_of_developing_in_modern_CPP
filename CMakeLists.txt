@@ -101,4 +101,6 @@ add_executable(Comparator_Generator red_belt/1_week/Comparator_Generator/airline
 add_executable(UPDATE_FIELD red_belt/1_week/UPDATE_FIELD/update_field.cpp red_belt/1_week/UPDATE_FIELD/airline_ticket.h)
 add_executable(print_values red_belt/1_week/print_values.cpp)
 add_executable(uniq_id red_belt/1_week/uniq_id.cpp)
+add_executable(table red_belt/1_week/table.cpp)
+add_executable(DequeBasedOnTwoVectors red_belt/1_week/DequeBasedOnTwoVectors.cpp)
 
