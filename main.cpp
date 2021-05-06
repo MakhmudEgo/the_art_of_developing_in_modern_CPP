@@ -38,5 +38,20 @@ int main() {
 	hellow("hello");
 	std::cout << "hello, world!:)" << std::endl;*/
 	std::string hello(*std::shared_ptr<std::string>(new std::string("hello")));
+#if __LLP64__
+	std::cout << "LLP64" << std::endl;
+#elif __LP64__
+	std::cout << "LP64" << ' ' << __LP64__ << std::endl;
+#endif
+#define HAVE_DISPLAY 1
+#define USE_COLORS_HELLO 1
+#if USE_COLORS_HELLO && !HAVE_DISPLAY
+#error "You cannot use colors unless you have a display"
+#endif
+
+#define MAKHMUD "makhmud"
+#define HELLO() \
+	hello(MAKHMUD##__LINE__);
+//	HELLO()
 	return (0);
 }
